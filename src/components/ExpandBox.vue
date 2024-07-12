@@ -14,6 +14,11 @@ const props = defineProps({
       type: String,
       default: 'Conteúdo da caixa de expansão',
     },
+    qtde:{
+        type: Number,
+        default: 1,
+
+    },
   });
 
 
@@ -26,6 +31,9 @@ const props = defineProps({
     <h1>{{ props.title }}</h1>
     <p>
         {{ props.content }}
+    </p>
+    <p>
+        {{ props.qtde }}
     </p>
     </div>
 </template>
