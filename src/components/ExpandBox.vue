@@ -7,19 +7,19 @@ const textoBotao = computed(
 )
 const props = defineProps({
     title: {
-      type: String,
-      required: true,
+        type: String,
+        required: true,
     },
     content: {
-      type: String,
-      default: 'Conteúdo da caixa de expansão',
+        type: String,
+        default: 'Conteúdo da caixa de expansão',
     },
-    qtde:{
+    qtde: {
         type: Number,
         default: 1,
 
     },
-  });
+});
 
 
 </script>
@@ -28,13 +28,13 @@ const props = defineProps({
 <template>
     <button @click="showContent = !showContent">{{ textoBotao }}</button>
     <div v-if="showContent" class="expand-box">
-    <h1>{{ props.title }}</h1>
-    <p>
-        {{ props.content }}
-    </p>
-    <p>
-        {{ props.qtde }}
-    </p>
+        <h1>{{ props.title }}</h1>
+        <p>
+            {{ props.content }}
+        </p>
+        <p>
+            Quantidade: {{ props.qtde }}
+        </p>
     </div>
 </template>
  
